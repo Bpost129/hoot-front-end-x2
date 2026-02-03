@@ -33,7 +33,7 @@ const BlogDetails = (props) => {
   }
   
   const handleDeleteComment = async (blogId, commentId) => {
-    //delte service call
+    await blogService.deleteComment(blogId, commentId)
     setBlog({ ...blog, comments: blog.comments.filter(com => com._id !== commentId ) })
   }
 

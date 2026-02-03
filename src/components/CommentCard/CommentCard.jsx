@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom"
 import AuthorInfo from "../AuthorInfo/AuthorInfo"
 import Icon from "../Icon/Icon"
 
-const CommentCard = ({ comment, blogId, user }) => {
+const CommentCard = ({ comment, blogId, user, handleDeleteComment }) => {
   return (
     <article>
       <header>
@@ -15,7 +15,7 @@ const CommentCard = ({ comment, blogId, user }) => {
               <NavLink to={`/blogs/${blogId}/comments/edit`} state={comment}>
                 <Icon category='Edit' />
               </NavLink>
-              <button><Icon category='Trash' /></button>
+              <button onClick={() => handleDeleteComment(blogId, comment._id)}><Icon category='Trash' /></button>
             </>
           }
         </span>
