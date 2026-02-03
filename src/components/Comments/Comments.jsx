@@ -9,7 +9,8 @@ const Comments = (props) => {
         <CommentCard 
           key={comment._id} 
           comment={comment}
-          user={props.user}  
+          user={props.user}
+          blogId={props.blogId}
         />
       )}
     </>
