@@ -116,7 +116,7 @@ function App() {
         <Route 
           path='/blogs/:blogId/comments/edit'
           element={
-            <ProtectedRoute>
+            <ProtectedRoute user={user}>
               <EditComment />
             </ProtectedRoute>
           }

@@ -59,8 +59,8 @@ const BlogDetails = (props) => {
       </article>
       <section>
         <h1>Comments</h1>
-        <Comments comments={blog.comments} user={props.user}/>
-        <NewComment handleAddComment={handleAddComment} user={props.user} blogId={blogId} />
+        <NewComment handleAddComment={handleAddComment} />
+        <Comments comments={blog.comments} blogId={blogId} user={props.user}/>
       </section>
     </main>
   )
